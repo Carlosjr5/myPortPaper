@@ -5,8 +5,15 @@ import proj2Imagen from "../assets/img/crontabimg.jpg";
 import proj3Imagen from "../assets/img/sem.jpg";
 import proj4Imagen from "../assets/img/connect-4.jpg";
 import proj5Imagen from "../assets/img/habits.jpg";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+
+import proj7Imagen from "../assets/img/napierbank-2.png";
+
+import proj9Imagen from "../assets/img/pong-2.png";
+import proj10Imagen from "../assets/img/fizh&chipss-2.png";
+
+import proj12Imagen from "../assets/img/EnergySysteem-2.png";
+import proj13Imagen from "../assets/img/carloskiwi.png";
+
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -19,6 +26,7 @@ export const Projects = () => {
       title: " Computer Systems - Assembly Game Hi-Lo",
       description: " That is a simple ARM32 Assembly written Higher - Lower  card game, which takes two integer inputs. Each number represents a card and each card have its strength.      The program just compares the numbers and then returns a string which tells the user which card is stronger/weaker. The idea of writing a small game in  Assembly was to teach some basics about CPU architecture. Learning a low level language gave me the opportunity to understand in depth the core concepts of programming, as you have to declare and write the code behind all the simple tasks that are already pre-written for you in most of the programming languages.  ",
       imgUrl: proj1Imagen,
+      
     },
     {
       title: "Operating Systems - Crontab - Task Manager",
@@ -43,24 +51,35 @@ export const Projects = () => {
     {
       title: "Object Oriented Software Development - Track&Trace",
       description: "This project has its design and implementation of a prototype for a track-and-trace system that will allow users to keep track of individuals with whom they have come into contact with and places that they have been. Track&Trace have a number of users, users will have a unique ID and phone number. The system will record events that are associated with each user. Events fall into two types:  ·       A contact occurs when two users have come into contact. Each contact records, the date and time of the contact and the two individuals involved.  ·       A visit occurs when a user checks in at a particular location Each visit should record  the user, the date time of the visit and the location.   The system also allow the creation of locations (shops, cafes etc). This project is developed using the programming language C# and using the CSV file to store the data with commas.",
-      imgUrl: projImg3,
+      imgUrl: proj10Imagen,
     },
     {
       title: "Napier Bank Service",
       description: "",
-      imgUrl: projImg2,
+      imgUrl: proj7Imagen,
     },
     {
       title: "Game Engineeering",
-      description: "Fizh&Chips its a game that is developed using C++ and CMake enginee.",
-      imgUrl: proj1Imagen,
+      description: "Clasic game Pong developed using C++ and CMake enginee.",
+      imgUrl: proj9Imagen,
+    },
+    {
+      title: "Game Engineeering",
+      description: "Fizh&Chips its a game that is developed using C++ and CMake engine by Angel Tenev & Carlos Jiménez.",
+      imgUrl: proj10Imagen,
     },
     {
       title: "Software Architecture",
       description: "Design & Development of a server with a database using Java and MySQL",
-      imgUrl: projImg2,
+      imgUrl: proj13Imagen,
     },
-  
+    {
+      title: "Multi-Agent System",
+      description: "System developed using C# and the ActressMAS framework in order to allow the agents to comunicate between them, and adding a Second-price bid auction protocol in order to make a p2p energy system determinating a number of households, depending on their demand will become buyer or seller and the market will open and agents will be changing bids between them saving a cost of buying the energy from the main source, while buying it form another household, both houses wins in terms of selling it for a higher price, and the other buying it for a lower price. ",
+      imgUrl: proj12Imagen,
+      href: "https://www.linkedin.com/in/carlos-jimenez-rodriguez-3b7081228",
+    },
+   
 
    
   ];
@@ -82,6 +101,9 @@ export const Projects = () => {
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="second">Tab 2</Nav.Link>
+
+                   
+
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">Opinion About Technology</Nav.Link>
