@@ -5,7 +5,7 @@ import proj2Imagen from "../assets/img/crontabimg.jpg";
 import proj3Imagen from "../assets/img/sem.jpg";
 import proj4Imagen from "../assets/img/connect-4.jpg";
 import proj5Imagen from "../assets/img/habits.jpg";
-
+import proj6Imagen from "../assets/img/track&trace-2.png";
 import proj7Imagen from "../assets/img/napierbank-2.png";
 
 import proj9Imagen from "../assets/img/pong-2.png";
@@ -51,11 +51,11 @@ export const Projects = () => {
     {
       title: "Object Oriented Software Development - Track&Trace",
       description: "This project has its design and implementation of a prototype for a track-and-trace system that will allow users to keep track of individuals with whom they have come into contact with and places that they have been. Track&Trace have a number of users, users will have a unique ID and phone number. The system will record events that are associated with each user. Events fall into two types:  ·       A contact occurs when two users have come into contact. Each contact records, the date and time of the contact and the two individuals involved.  ·       A visit occurs when a user checks in at a particular location Each visit should record  the user, the date time of the visit and the location.   The system also allow the creation of locations (shops, cafes etc). This project is developed using the programming language C# and using the CSV file to store the data with commas.",
-      imgUrl: proj10Imagen,
+      imgUrl: proj6Imagen,
     },
     {
       title: "Napier Bank Service",
-      description: "",
+      description: "In this project we are able to save tweets where the mentions can be saved with a uniqueID starting with 'T'.",
       imgUrl: proj7Imagen,
     },
     {
