@@ -8,6 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
+
 app.listen(5001, () => console.log("Server Running"));
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
@@ -18,7 +19,7 @@ const contactEmail = nodemailer.createTransport({
   port: 5001,
   auth: {
     user: 'shaymabel0@gmail.com',
-    pass: 'jhgcnwnckaxudwiz'
+    pass: 'qsjspcmtgnrfbxce'
   },
 });
 
