@@ -17,10 +17,11 @@ import proj13Imagen from "../assets/img/carloskiwi.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { PlayBtn } from "react-bootstrap-icons";
+
 
 export const Projects = () => {
 
+  
   const projects = [
     {
       title: " Computer Systems - Assembly Game Hi-Lo",
@@ -52,10 +53,15 @@ export const Projects = () => {
       title: "Object Oriented Software Development - Track&Trace",
       description: "This project has its design and implementation of a prototype for a track-and-trace system that will allow users to keep track of individuals with whom they have come into contact with and places that they have been. Track&Trace have a number of users, users will have a unique ID and phone number. The system will record events that are associated with each user. Events fall into two types:  ·       A contact occurs when two users have come into contact. Each contact records, the date and time of the contact and the two individuals involved.  ·       A visit occurs when a user checks in at a particular location Each visit should record  the user, the date time of the visit and the location.   The system also allow the creation of locations (shops, cafes etc). This project is developed using the programming language C# and using the CSV file to store the data with commas.",
       imgUrl: proj6Imagen,
-    },
+    }
+   
+
+   
+  ];
+  const project2  = [
     {
-      title: "Napier Bank Service",
-      description: "In this project we are able to save tweets where the mentions can be saved with a uniqueID starting with 'T'.",
+      title: "Software Engineering",
+      description: "Napier Bank Service is a medium-sized local bank with many thousands of users. The bank operates from one headquarters and a number of branches. You are required to develop a service, namely Napier Bank Messaging (NBM), which will validate, sanitize and categorise incoming messages to Napier Bank in the form of SMS text messages, emails and Tweets. All messages are strings of ASCII characters that have a Message Header comprising a Message ID (Message-type “S”,”E” or “T” followed by 9 numeric characters, e.g. “E1234567701”) followed by the Body of the message.      ",
       imgUrl: proj7Imagen,
     },
     {
@@ -79,10 +85,8 @@ export const Projects = () => {
       imgUrl: proj12Imagen,
       href: "https://www.linkedin.com/in/carlos-jimenez-rodriguez-3b7081228",
     },
-   
-
-   
   ];
+
 
   return (
     <section className="project" id="project">
@@ -97,43 +101,70 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
+                  
                       <Nav.Link eventKey="first">Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-
-                   
-
+                      <Nav.Link eventKey="second">Projects</Nav.Link>
+                  
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Opinion About Technology</Nav.Link>
+                      <Nav.Link eventKey="third">Outcomes learning of technology</Nav.Link>
+                      
                     </Nav.Item>
+          
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
                         {
+
+                         
                           projects.map((project, index) => {
+                          
                             return (
+                              
                               <ProjectCard
+                              
                                 key={index}
                                 {...project}
+                                />
+
+                                
+                            )
+                            
+                          })
+                        }
+                      </Row>
+
+                    </Tab.Pane>
+
+                    <Tab.Pane eventKey="second" >
+                      <Row>
+                        {
+                          project2.map((project2, index2) => {
+                            return (
+                              <ProjectCard
+                                key={index2}
+                                {...project2}
                                 />
                             )
                           })
                         }
                       </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
+                    </Tab.Pane>                   
+                    <Tab.Pane eventKey="fourth">
+                  
+                
+                    
+                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                     <p>Technology has revolutionized the way we live, work, and communicate. From the development of the wheel to the invention of the internet, technology has played a central role in human progress and continues to shape the world we live in.</p>
-                  <p>One of the most significant impacts of technology has been the ability to connect people from all over the world through the internet and social media. This has made it easier to share ideas, collaborate on projects, and stay in touch with loved ones, regardless of location.</p>
-                  <p>Technology has also had a major impact on the way we do business. With the rise of e-commerce and online platforms, it's easier than ever for people to start and run their own businesses, and for consumers to shop for products and services from the comfort of their own homes.</p>
-                  <p>In many fields, technology has also made it possible to automate tasks and streamline processes, increasing efficiency and productivity. This has had a major impact on industries such as manufacturing, transportation, and healthcare.</p>
-                  <p>Overall, technology has had a huge impact on our daily lives and will continue to shape the way we live and work in the future.</p>
-                     </Tab.Pane>
+                    <p>One of the most significant impacts of technology has been the ability to connect people from all over the world through the internet and social media. This has made it easier to share ideas, collaborate on projects, and stay in touch with loved ones, regardless of location.</p>
+                    <p>Technology has also had a major impact on the way we do business. With the rise of e-commerce and online platforms, it's easier than ever for people to start and run their own businesses, and for consumers to shop for products and services from the comfort of their own homes.</p>
+                    <p>In many fields, technology has also made it possible to automate tasks and streamline processes, increasing efficiency and productivity. This has had a major impact on industries such as manufacturing, transportation, and healthcare.</p>
+                    <p>Overall, technology has had a huge impact on our daily lives and will continue to shape the way we live and work in the future.</p>
+                    </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
               </div>}
@@ -141,7 +172,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt="100"></img>
     </section>
   )
 }
