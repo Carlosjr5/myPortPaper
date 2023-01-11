@@ -27,8 +27,9 @@ export const Contact = () => {
     e.preventDefault();
     
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5001/contact", {
+    let response = await fetch("http://cjr23.info/contact", {
       method: "POST",
+      PORT: 5001,
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },

@@ -7,18 +7,18 @@ const nodemailer = require("nodemailer");
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/", router);
-app.listen(5001, () => console.log("Server Running"));
+app.use("http://cjr23.info/", router);
+app.listen(5001), () => console.log("Server Running");
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
-  host: 'smtp.gmail.com ', 
-  port: 5001,
+  host: 'smtp.gmail.com', 
+  PORT: 5001,
   auth: {
     user: 'shaymabel0@gmail.com',
-    pass: 'jkoczlsmheujulmc'
+    pass: 'yaftottcnklhxxtb'
   },
 });
 
@@ -27,6 +27,7 @@ contactEmail.verify((error) => {
     console.log(error);
   } else {
     console.log("Ready to Send");
+    console.log(process.env.PORT);
   }
 });
 
@@ -37,7 +38,7 @@ router.post("/contact", (req, res) => {
   const phone = req.body.phone;
   const mail = {
     from: name,
-    to: "shaymabel0@gmail.com",
+    to: 'shaymabel0@gmail.com',
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
