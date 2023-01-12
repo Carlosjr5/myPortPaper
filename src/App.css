@@ -233,13 +233,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  margin-top: 310px;
-  margin-left: 190px;
+
   padding: 290px 190px 100px 0;
-  background-image: url('./assets/img/mifoto.jpeg');
-  background-position: top left;
-  background-size: 290px;
-  background-repeat: no-repeat;
+  background-image: url('./assets/img/banner-bg.png');
+  
+
+
 
 }
 

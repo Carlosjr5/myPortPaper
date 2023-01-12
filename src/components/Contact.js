@@ -27,13 +27,17 @@ export const Contact = () => {
     e.preventDefault();
     
     setButtonText("Sending...");
-    let response = await fetch("http://cjr23.info/contact", {
+
+    let response = await fetch("http://cjr23.info/#contact/contact", {
+   
       method: "POST",
-      PORT: 5001,
       headers: {
+        "Access-Control-Allow-Origin" : "*",
         "Content-Type": "application/json;charset=utf-8",
+       
       },
       body: JSON.stringify(formDetails),
+      
     });
     setButtonText("Send");
     let result = await response.json();

@@ -1,21 +1,26 @@
 const express = require("express");
 const router = express.Router();
-const cors = require("cors");
+const cors = require('cors');
 const nodemailer = require("nodemailer");
+const { Postage } = require("react-bootstrap-icons");
+require("dotenv").config();
+
 
 // server used to send send emails
 const app = express();
-app.use(cors());
+app.use(cors('Access-Control-Allow-Origin'));
 app.use(express.json());
-app.use("http://cjr23.info/", router);
-app.listen(5001), () => console.log("Server Running");
+process.env.PORT = 'http://cjr23.info'
+app.use("/", router);
+app.listen(), () => console.log("Server Running");
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
+
 
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   host: 'smtp.gmail.com', 
-  PORT: 5001,
+
   auth: {
     user: 'shaymabel0@gmail.com',
     pass: 'yaftottcnklhxxtb'
@@ -23,6 +28,7 @@ const contactEmail = nodemailer.createTransport({
 });
 
 contactEmail.verify((error) => {
+  
   if (error) {
     console.log(error);
   } else {
@@ -31,7 +37,11 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact", (req, res) => {
+
+
+
+router.post("/#connect/contact", (req, res) => {
+  
   const name = req.body.firstName + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
