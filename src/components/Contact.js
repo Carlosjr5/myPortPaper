@@ -28,7 +28,7 @@ export const Contact = () => {
     
     setButtonText("Sending...");
 
-    let response = await fetch("http://cjr23.info/#contact/contact", {
+    let response = await fetch(process.env.PORT + "/contact", {
    
       method: "POST",
       headers: {

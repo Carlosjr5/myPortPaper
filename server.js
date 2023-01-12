@@ -40,7 +40,7 @@ contactEmail.verify((error) => {
 
 
 
-router.post("/#connect/contact", (req, res) => {
+router.post("/contact", (req, res) => {
   
   const name = req.body.firstName + req.body.lastName;
   const email = req.body.email;
