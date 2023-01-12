@@ -10,7 +10,7 @@ require("dotenv").config();
 const app = express();
 app.use(cors('Access-Control-Allow-Origin'));
 app.use(express.json());
-process.env.PORT = 'http://cjr23.info'
+process.env.PORT = 'http://cjr23.info/'
 app.use("/", router);
 app.listen(), () => console.log("Server Running");
 console.log(process.env.EMAIL_USER);
