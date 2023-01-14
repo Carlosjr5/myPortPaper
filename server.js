@@ -10,8 +10,8 @@ require("dotenv").config();
 const app = express();
 app.use(cors('Access-Control-Allow-Origin'));
 app.use(express.json());
-process.env.PORT = 'http://cjr23.info/'
-app.use("/", router);
+
+app.use("http://cjr23.info", router);
 app.listen(), () => console.log("Server Running");
 console.log(process.env.EMAIL_USER);
 console.log(process.env.EMAIL_PASS);
@@ -36,8 +36,6 @@ contactEmail.verify((error) => {
     console.log(process.env.PORT);
   }
 });
-
-
 
 
 router.post("/contact", (req, res) => {

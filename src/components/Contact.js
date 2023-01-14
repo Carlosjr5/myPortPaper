@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../assets/img/contact-background.jpg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -28,7 +28,7 @@ export const Contact = () => {
     
     setButtonText("Sending...");
 
-    let response = await fetch(process.env.PORT + "/contact", {
+    let response = await fetch("http:/cjr23.info/contact", {
    
       method: "POST",
       headers: {

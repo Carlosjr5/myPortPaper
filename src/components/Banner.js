@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/mifoto.jpeg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import navIcon1 from '../assets/img/nav-icon1.svg';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -11,7 +12,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   // eslint-disable-next-line
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Software Developer" ,"Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "Software Developer" ,"Web Developer", "Web Designer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -61,15 +62,18 @@ export const Banner = () => {
                  
                                   
                                   
-                  <button onClick={() => console.log('connect')}>Feel free to contact with me! </button>
+              
               </div>}
             </TrackVisibility>
           </Col>
-          <Col xs={12} md={6} xl={5}>
+          <Col xs={12} md={22} xl={43}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                
+                  <button onClick={() => console.log('connect')}>Feel free to contact with me!
+                  <a href="https://www.linkedin.com/in/carlos-jimenez-rodriguez-3b7081228"><img src={headerImg} alt="Header Img" /></a>
+                   </button>
                 </div>}
             </TrackVisibility>
           </Col>

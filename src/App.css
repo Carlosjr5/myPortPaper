@@ -32,7 +32,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background-color: #000000 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -235,9 +235,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
 
   padding: 290px 190px 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url('./assets/img/orobackground.jpg');
   
-
+background-repeat: no-repeat;
 
 
 }
@@ -354,7 +354,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  
+  background-image: url('./assets/img/footer-bg.png');
 }
 .project h2 {
 	font-size: 45px;
@@ -478,7 +479,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+
+  background-image: url('./assets/img/footer-bg.png');
   padding: 60px 0 200px 0;
 }
 .contact img {

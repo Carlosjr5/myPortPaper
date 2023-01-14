@@ -102,14 +102,14 @@ export const Projects = () => {
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                   
-                      <Nav.Link eventKey="first">Projects</Nav.Link>
+                      <Nav.Link eventKey="first">Learnings</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Projects</Nav.Link>
+                      <Nav.Link eventKey="second">Learnings</Nav.Link>
                   
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Outcomes learning of technology</Nav.Link>
+                      <Nav.Link eventKey="third">Outcomes</Nav.Link>
                       
                     </Nav.Item>
           
